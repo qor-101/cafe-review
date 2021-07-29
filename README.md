@@ -2,10 +2,9 @@ Cafe Review is a website hosting reviews of university courses and instructors. 
 
 INSTRUCTIONS TO CONTRIBUTORS:
 
-1) Front End people create a seperate branch called "frontend" and set your local folder to track that branch only. All commits should be made to that branch only.
+1) Front End people, set your local folder to track the "frontend" branch only. All commits should be made to that branch only.
 
-2) Back End people create a sepearate branch called "backend" and set your local folder to track that branch only.
-All commits should be made to that branch only.
+2) Back End people, set your local folder to track the "backend" branch only. All commits should be made to that branch only.
 
 3) ALL COMMITS must be uniquely named, so that it is easy to backtrack to last working commit in case of a broken code.
 
