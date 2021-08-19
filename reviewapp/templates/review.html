@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--{% load static %}-->
+<html>    
+  
+  <head>
+    <!--<link rel="stylesheet" href="{% static 'styles.css' %}">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Write your Review</title>
+    <h2><center><em> Fill in your Review </em></center></h2>
+  </head>
+  <script>
+
+  </script>
+  <body>
+    <br>
+    <div>
+      <form action="/upload" method="POST">
+        <label for="college">College Name:</label><br>
+        <input type="text" id="college" name="college"><br>
+        <label for="course">Course Name:</label><br>
+        <input type="text" id="course" name="course"><br>
+        <label for="review">Compose your Review Here:</label><br>
+        <textarea id="review" name="review" rows="10" cols="75"></textarea><br><br>
+        <button id = submit class="" onclick="uploadReview()"> Submit Review </button>
+      </form> 
+    </div>
+  </body>
+</html>
