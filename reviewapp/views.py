@@ -7,6 +7,7 @@ from .dbactions import *
 #from .models import
 # Create your views here.
 
+@csrf_exempt
 def index(request):
     return HttpResponse("This is the Default Page of Cafe Review, Users are not supposed to see this")
 
@@ -17,9 +18,13 @@ def new_review(request):
 @csrf_exempt
 def upload_review(request):
     db_name = request.POST['branch']
-    coll_name = request.POST['college']
+    college_name = request.POST['college']
+    college_name = college_name.replace(" ","")
+    college_name = college_name.lower()
+    print(college_name)
+    coll_name = college_name
     doc = {
-        "college":request.POST['college'],
+        "college":college_name,
         "course":request.POST['course'],
         "review":request.POST['review'],
     }
@@ -29,8 +34,10 @@ def upload_review(request):
     else:
         return redirect('/upload-failed')
 
+@csrf_exempt
 def upload_success(request):
     return HttpResponse("Your review was recorded Successfully")
 
+@csrf_exempt
 def upload_failed(request):
     return HttpResponse("Something is not right, Please Try Again")
