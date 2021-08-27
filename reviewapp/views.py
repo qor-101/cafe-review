@@ -16,7 +16,7 @@ def new_review(request):
 
 @csrf_exempt
 def upload_review(request):
-    db_name = 'Arts'
+    db_name = request.POST['branch']
     coll_name = request.POST['college']
     doc = {
         "college":request.POST['college'],
