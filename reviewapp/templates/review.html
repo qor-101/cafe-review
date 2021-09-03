@@ -15,13 +15,22 @@
     <br>
     <div>
       <form action="/upload" method="POST">
+        <label for="branch">Discipline&emsp;&emsp;</label>
+        <select id ="branch" name = "branch">
+          <option value="Arts">Arts</option>
+          <option value="Engineering">Engineering</option>
+          <option value="Medicine">Medicine</option>
+          <option value="Law">Law</option>
+        </select>
+        <br>
+        <br>
         <label for="college">College Name:</label><br>
         <input type="text" id="college" name="college"><br>
         <label for="course">Course Name:</label><br>
         <input type="text" id="course" name="course"><br>
         <label for="review">Compose your Review Here:</label><br>
         <textarea id="review" name="review" rows="10" cols="75"></textarea><br><br>
-        <button id = submit class="" onclick="uploadReview()"> Submit Review </button>
+        <button id = submit"> Submit Review </button>
       </form> 
     </div>
   </body>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Search Reviews
+        </title>
+        <style>
+            .searchbox{
+                margin-left: 37%;
+                margin-right: 25%;
+                margin-top: 10%;
+                width: 500px;
+                height: 45px;
+            }
+            .button{
+                margin-left: 30%;
+                margin-right: 25%;
+                width: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2><center>Search Reviews</center></h2>
+        <div >
+            <form action="/fetch" method="POST" class="searchbox">
+                <label for="branch">Discipline:&emsp;&emsp;&emsp;&emsp;</label>
+                <select id ="branch" name = "branch">
+                    <option value="Arts">Arts</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Medicine">Medicine</option>
+                    <option value="Law">Law</option>
+                </select>
+                <br>
+                <br>
+                <label for="college">College Name:&emsp;&emsp;</label>
+                <input type="text" id="college" name="college"><br><br>
+                <label for="course">Course Name:&emsp;&emsp;</label>
+                <input type="text" id="course" name="course"><br><br><br>
+                <input type="submit" class="button" name="submitbutton" id="submitbutton" value="Search">
+            </form>
+        </div>
+    </body>
+</html>

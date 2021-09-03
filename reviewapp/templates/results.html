@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>search results</title>
+    <script>
+
+    </script>
+  </head>
+  <body>
+    <h1><center>Results</center></h1>
+    <br>
+    <br>
+    <table style="margin-left: 20%; margin-right: 20%; border-width: 3px; border-style:none;">
+    {% for item in items %}
+    <tr>
+    <td style="padding: 30px; border-width: 3px; border-style:dotted;">
+    <p> 
+        <b>College:</b> {{item.college}}
+        <br>
+        <b>Course:</b> {{item.course}}
+        <br>
+        <b>Review:</b> {{item.review}}
+        <br>
+    </p>
+    </td>
+    </tr>
+    {% endfor %}
+    </table>
+  </body>
+</html>
