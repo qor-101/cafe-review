@@ -31,8 +31,8 @@ def upload_review(request):
     coll_name = college_name
     
     doc = {
-        "college":college_name,
-        "course":course_name,
+        "college":request.POST['college'],
+        "course":request.POST['course'],
         "review":request.POST['review'],
     }
     
@@ -62,11 +62,7 @@ def fetch(request):
     college_name = college_name.replace(" ","")
     college_name = college_name.lower()
     
-    course_name = request.POST['course']
-    course_name = course_name.replace(" ","")
-    course_name = course_name.lower()
-    
-    kei = { 'course' : course_name }
+    kei = { 'course' : request.POST['course'] }
     
     returned = func_retreive(request.POST['branch'],college_name,kei)
     
