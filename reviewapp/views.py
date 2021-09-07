@@ -9,7 +9,7 @@ from .dbactions import *
 
 @csrf_exempt
 def index(request):
-    return HttpResponse("This is the Default Page of Cafe Review, Users are not supposed to see this")
+    return render(request,"homepage.html")
 
 @csrf_exempt
 def new_review(request):

@@ -1,8 +1,10 @@
+<!DOCTYPE html>
+{% load static %}
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>homepage-cafe review</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -17,7 +19,7 @@
 <div style="position: relative;" id="HP">
 
 	<div class="logo">
-        <img src="app1.png" style="float:left;" alt="logo" height="55px" width="70px">
+        <img src="{% static 'app1.png' %}" style="float:left;" alt="logo" height="55px" width="70px">
         <p style="padding-top:18px;"><b>Course</b>bay</p>
     </div>
 
@@ -28,7 +30,7 @@
     
     <br><br>
 
-    <a href="search.html"><button id="button">see reviews</button></a>
+    <a href="search"><button id="button">see reviews</button></a>
     <button id="button1" onclick="openform()">write reviews</button> 
 
 </div>
