@@ -5,23 +5,74 @@
             Search Reviews
         </title>
         <style>
-            .searchbox{
-                margin-left: 37%;
-                margin-right: 25%;
-                margin-top: 10%;
-                width: 500px;
-                height: 45px;
+            @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Ubuntu');
+            @import url('https://fonts.googleapis.com/css?family=Montserrat');
+            
+            h2{
+                font-weight: bolder;
+                text-decoration: underline;
+                font-size: 30px;
             }
             .button{
                 margin-left: 30%;
                 margin-right: 25%;
-                width: 150px;
+                width: 100px;
+                height: 30px;
+                border-radius: 20px;
+                border-color: white;
+                background-color: rgba(0, 0, 0, 0);
+                color: white;
+            }
+            .button:hover{
+                background-color: white;
+                color: black;
+                transition: 0.8s;
+                cursor: pointer;
+            }
+            body{
+                background-image: url('res.png');
+                color: white;
+                font-family: Ubuntu;
+                border: none;
+            }
+            #searchDiv{
+                border: 2px solid white;
+                border-radius: 30px;
+                height: 300px;
+                width: 500px;
+                text-align: center;
+                margin-left: 370px;
+                margin-top: 150px;
+            }
+            label{
+                font-size: 20px;
+            }
+            #college,#course{
+                border: none;
+                background: transparent;
+                border-bottom: solid white;
+                outline: none;
+                color: white;
+            }
+
+            #branch{
+                margin: 0;
+                color: white;
+                background: transparent;
+                height: 30px;
+                width: 100px;
+            }
+
+            option{
+                background-color: black;
+                font-size: 16px;
             }
         </style>
     </head>
     <body>
-        <h2><center>Search Reviews</center></h2>
-        <div >
+        
+        <div id="searchDiv">
+            <h2><center>Search Reviews</center></h2>
             <form action="/fetch" method="POST" class="searchbox">
                 <label for="branch">Discipline:&emsp;&emsp;&emsp;&emsp;</label>
                 <select id ="branch" name = "branch">
@@ -33,7 +84,7 @@
                 <br>
                 <br>
                 <label for="college">College Name:&emsp;&emsp;</label>
-                <input type="text" id="college" name="college"><br><br>
+                <input type="text" id="college" name="college" ><br><br>
                 <label for="course">Course Name:&emsp;&emsp;</label>
                 <input type="text" id="course" name="course"><br><br><br>
                 <input type="submit" class="button" name="submitbutton" id="submitbutton" value="Search">
