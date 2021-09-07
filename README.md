@@ -6,8 +6,6 @@ INSTRUCTIONS TO CONTRIBUTORS:
 
 2) Do a git fetch and git pull before you start working for each time.
 
-3) Commit and push to the concerned branch after you are done for the day.
+3) Commit and push to the main branch after you are done for the day.
 
-4) When you are certain of the changes you have made to the concerned branch raise a pull request.
-
-5) Feel free to contact qor-101 at qor6119@gmail.com for any queries.
+4) Feel free to contact qor-101 at qor6119@gmail.com for any queries.
