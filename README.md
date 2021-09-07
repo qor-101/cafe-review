@@ -2,16 +2,12 @@ Cafe Review is a website hosting reviews of university courses and instructors. 
 
 INSTRUCTIONS TO CONTRIBUTORS:
 
-1) Front End people, set your local folder to track the "frontend" branch only. All commits should be made to that branch only.
+1) ALL COMMITS must be uniquely named, so that it is easy to backtrack to last working commit in case of a broken code.
 
-2) Back End people, set your local folder to track the "backend" branch only. All commits should be made to that branch only.
+2) Do a git fetch and git pull before you start working for each time.
 
-3) ALL COMMITS must be uniquely named, so that it is easy to backtrack to last working commit in case of a broken code.
+3) Commit and push to the concerned branch after you are done for the day.
 
-4) Do a git fetch and git pull before you start working for each time.
+4) When you are certain of the changes you have made to the concerned branch raise a pull request.
 
-5) Commit and push to the concerned branch after you are done for the day.
-
-6) When you are certain of the changes you have made to the concerned branch raise a pull request.
-
-7) Feel free to contact qor-101 at qor6119@gmail.com for any queries.
+5) Feel free to contact qor-101 at qor6119@gmail.com for any queries.
