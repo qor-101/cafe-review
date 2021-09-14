@@ -4,25 +4,34 @@
 body{
 	background-image: url('res.png');
 	background-size: cover;
+    border:white;
 	}
 .logo{
 	font-family: Josefin Sans;
-    font-size:25px;
-    margin-top: 41px;
-	margin-left: 113px;
+    font-size:1.5625em;
+    margin-top: 2.5625em;
+	margin-left:5.0625em;
 	color: white;   
 	}
 #tag{
     font-family:Montserrat; 
     font-weight:bolder;
-    font-size: 60px;
+    font-size: 3.75em;
     color: white;
+<<<<<<< Updated upstream
     margin-left: 113px;
+=======
+<<<<<<< HEAD
+    margin-left: 2.0625em;
+=======
+    margin-left: 113px;
+>>>>>>> 8543f2125eb873df5b6881a34d797fe0b9b649d4
+>>>>>>> Stashed changes
     }
 .para{
-    margin-left:113px;
+    margin-left:7.0625em;
     color:#c7c1c1;
-    font-size:18px;
+    font-size:1.125em;
     font-weight:lighter;
     line-height: 1.7em;
     text-align: justify;
@@ -30,30 +39,30 @@ body{
     font-family:Ubuntu;
     }
 #button{
-    width:150px;
-    height:45px;
-    border-width:2px;
+    width:9.375em;
+    height:2.8125em;
+    border-width:0.125em;
     border-color:white;
-    border-radius:20px;
+    border-radius:1.25em;
     background-color:rgba(0, 0, 0, 0);
     color:white;
     font-family:ubuntu;
-    font-size: 18px;
-    margin-left: 113px;
-    margin-top: 20px;
+    font-size: 1.125em;
+    margin-left: 7.0625em;
+    margin-top: 1.25em;
     }
 #button1{
-    width:150px;
-    height:45px;
-    border-width:2px;
+    width:9.375em;
+    height:2.8125em;
+    border-width:0.125em;
     border-color:white;
-    border-radius:20px;
+    border-radius:1.25em;
     background-color:rgba(0, 0, 0, 0);
     color:white;
     font-family:ubuntu;
-    font-size: 18px;
-    margin-left: 20px;
-    margin-top: 20px;
+    font-size: 1.125em;
+    margin-left: 1.25em;
+    margin-top: 1.25em;
     }
 #button:hover{
     background-color: white;
