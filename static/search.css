@@ -6,7 +6,7 @@
                 font-size: 30px;
             }
             .button{
-                margin-left: 30%;
+                margin-left: 40%;
                 margin-right: 25%;
                 width: 100px;
                 height: 30px;
@@ -23,12 +23,13 @@
             }
             body{
                 background-image: url('res.png');
+                background-size: cover;
                 color: white;
                 font-family: Ubuntu;
                 border: none;
             }
             #searchDiv{
-                border: 2px solid white;
+                border: 2px solid rgb(161, 15, 15);
                 border-radius: 30px;
                 height: 300px;
                 width: 500px;

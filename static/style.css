@@ -4,7 +4,7 @@
 body{
 	background-image: url('res.png');
 	background-size: cover;
-    border:white;
+   
 	}
 .logo{
 	font-family: Josefin Sans;
@@ -18,15 +18,7 @@ body{
     font-weight:bolder;
     font-size: 3.75em;
     color: white;
-<<<<<<< Updated upstream
-    margin-left: 113px;
-=======
-<<<<<<< HEAD
-    margin-left: 2.0625em;
-=======
-    margin-left: 113px;
->>>>>>> 8543f2125eb873df5b6881a34d797fe0b9b649d4
->>>>>>> Stashed changes
+    margin-left: 7.0625em;
     }
 .para{
     margin-left:7.0625em;
