@@ -11,4 +11,5 @@ urlpatterns = [
         path('fetch',views.fetch,name='fetch'),
         path('results',views.results,name='results'),
         path('noresults',views.noresults,name='noresults'),
+        path('login',views.login,name='login'),
 ]

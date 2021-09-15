@@ -85,3 +85,10 @@ def results(request):
 @csrf_exempt
 def noresults(request):
     return HttpResponse("No Reviews Found :(")
+
+@csrf_exempt
+def login(request):
+    
+    cand_usn = request.POST['UN']
+    cand_pwd = request.POST['PW']
+    
