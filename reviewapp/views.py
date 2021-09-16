@@ -98,4 +98,11 @@ def login_user(request):
         return redirect('/write-review')
     else:
         return redirect('/')
+
+@csrf_exempt
+def signup_user(request):
+    
+    new_usn = request.POST['']
+    new_pwd = request.POST['']
+    new_email = request.POST['']
     
