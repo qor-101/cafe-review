@@ -35,7 +35,8 @@
 
 </div>
 
-    <div class="div1" id="myForm" action="/login" method="POST">
+    <div class="div1" id="myForm">
+        <form action="/login" method="POST">
             <label style="color: white; font-family: Ubuntu; font-weight: bold; font-size: 25px; text-decoration: underline;">LOGIN </label>
             <br><br>
             <label for="UN" style="color: white; font-family: Ubuntu; font-weight: bold;">Username :</label>
@@ -44,11 +45,12 @@
             <label for="PW" style="color: white; font-family: Ubuntu; font-weight: bold;">Password: </label>
             <input type="password" name="PW" id="PW">
             <br><br>
-            <input type="submit" name="login" value="Login" id="button2">
+            <input type="submit" name="button2" value="Login" id="button2">
             <input type="reset" value="close" id="button3" onclick="closeform()">
             <br>
             <label style="color: white;">Don't have an account?</label>
             <a href="#" id="a1">Signup</a>
+        </form>
     </div>
 
     <script type="text/javascript">

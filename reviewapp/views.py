@@ -4,6 +4,7 @@ from django.http import HttpResponse, request
 from django.template import loader
 from django import forms
 from .dbactions import *
+from django.contrib.auth import authenticate, login
 #from .models import
 # Create your views here.
 
@@ -87,8 +88,14 @@ def noresults(request):
     return HttpResponse("No Reviews Found :(")
 
 @csrf_exempt
-def login(request):
+def login_user(request):
     
     cand_usn = request.POST['UN']
     cand_pwd = request.POST['PW']
+    user = authenticate(request, username = cand_usn, password = cand_pwd)
+    if user is not None:
+        login(request, user)
+        return redirect('/write-review')
+    else:
+        return redirect('/')
     
