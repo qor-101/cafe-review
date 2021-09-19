@@ -7,13 +7,23 @@
         </title>
         <link rel="stylesheet" href="{% static 'search.css' %}">
     </head>
+    <script type="text/javascript">
+      function validate() {
+        var col = document.forms["searchForm"]["college"].value;
+        if (col.length <= 8) {
+          alert("College name is too short."); 
+          return false;
+        }
+      }
+    </script>
     <body>
         
         <div id="searchDiv">
             <h2><center>Search Reviews</center></h2>
-            <form action="/fetch" method="POST" class="searchbox">
+            <form name="searchForm" id="searchForm" action="/fetch" method="POST" class="searchbox" onsubmit="return validate()">
                 <label for="branch">Discipline:&emsp;&emsp;&emsp;&emsp;</label>
-                <select id ="branch" name = "branch">
+                <select id ="branch" name = "branch" required>
+                    <option value="" selected disabled hidden>Select your choice</option>
                     <option value="Arts">Arts</option>
                     <option value="Engineering">Engineering</option>
                     <option value="Medicine">Medicine</option>

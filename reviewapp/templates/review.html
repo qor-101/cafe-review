@@ -10,24 +10,27 @@
   </head>
       <script type="text/javascript">
       function validate() {
-        var col = document.getElementById('college').value;
-        var course = document.getElementById('course').value;
-        var rev = document.getElementById('review').value;
+        var col = document.forms["reviewForm"]["college"].value;
+        var course = document.forms["reviewForm"]["course"].value;
+        var rev = document.forms["reviewForm"]["review"].value;
         if (col.length <= 8) {
           alert("College name is too short."); 
+          return false;
         }
         if (course.length <= 5) {
-          alert("course name is too short.")
+          alert("course name is too short.");
+          return false;
         }
         if (rev.length <= 20) {
-          alert("review is too short.")
+          alert("review is too short.");
+          return false;
         }
       }
     </script>
   <body>
     <br>
     <div>
-      <form action="/upload" method="POST" id="reviewForm" name="reviewForm">
+      <form name="reviewForm" method="POST" action="/upload" onsubmit="return validate()">
         <label for="branch" style="color: white;">Discipline&emsp;&emsp;</label>
         <select id ="branch" name = "branch" required>
           <option value="" selected disabled hidden>Select your choice</option>
@@ -44,7 +47,7 @@
         <input type="text" id="course" name="course"><br>
         <label for="review" style="color: white;">Compose your Review Here:</label><br>
         <textarea id="review" name="review" rows="10" cols="75"></textarea><br><br>
-        <button id = "submit" onclick="validate()"> Submit Review </button>
+        <input type="submit" value="Post Review" id="submit">
       </form> 
     </div>
   </body>

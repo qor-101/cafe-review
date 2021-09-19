@@ -15,25 +15,62 @@
     </script>
     
 </head>
+<script type="text/javascript">
+    function validate() {
+            var fname = document.forms["myForms"]["fname"].value;
+            var lname = document.forms["myForms"]["lname"].value;
+            var mail = document.forms["myForms"]["mail"].value;
+            var usn = document.forms["myForms"]["usn"].value;
+            var pwd = document.forms["myForms"]["pwd"].value;
+
+            if (usn.length <= 4) {
+                alert("username should be greater than 4 characters");
+                return false;
+            }
+        }
+
+        function opensignup() {
+            document.getElementById('myForm').style.display='none';
+            document.getElementById('UN').value="";
+            document.getElementById('PW').value="";
+            $("#signupForm").fadeIn(500);
+        }
+
+        function closesignup() {
+            document.getElementById('signupForm').style.display='none';
+            document.getElementById('fname').value="";
+            document.getElementById('lname').value="";
+            document.getElementById('email').value="";
+            document.getElementById('usn').value="";
+            document.getElementById('pwd').value="";
+
+        }
+
+        function closeform() {
+            document.getElementById('myForm').style.display='none';
+            document.getElementById('UN').value="";
+            document.getElementById('PW').value="";
+
+        }
+    </script>
 <body>
-<div style="position: relative;" id="HP">
+    <div style="position: relative;" id="HP">
 
-	<div class="logo">
-        <img src="{% static 'app1.png' %}" style="float:left;" alt="logo" height="55px" width="70px">
-        <p style="padding-top:18px;"><b>Course</b>bay</p>
-    </div>
+	   <div class="logo">
+            <img src="{% static 'app1.png' %}" style="float:left;" alt="logo" height="55px" width="70px">
+            <p style="padding-top:18px;"><b>Course</b>bay</p>
+        </div>
 
-    <br><br><br>
+        <br><br><br>
 
-    <span id="tag">Rate. Review. Represent.</span>
-    <p class="para">Coursebay is a website hosting reviews of university courses and instructors. Reviews are written by present and past students taking the specific course. Reviews are accesible through a simple search or through categorically choosing college, department and course.</p>
+        <span id="tag">Rate. Review. Represent.</span>
+        <p class="para">Coursebay is a website hosting reviews of university courses and instructors. Reviews are written by present and past students taking the specific course. Reviews are accesible through a simple search or through categorically choosing college, department and course.</p>
     
-    <br><br>
+        <br><br>
 
-    <a href="search"><button id="button">see reviews</button></a>
-    <button id="button1">write reviews</button> 
-
-</div>
+        <a href="search"><button id="button">see reviews</button></a>
+        <button id="button1">write reviews</button> 
+    </div>
 
     <div class="div1" id="myForm">
         <form action="/login" method="POST">
@@ -53,19 +90,8 @@
         </form>
     </div>
     
-
-    <script type="text/javascript">
-
-        function closeform() {
-            document.getElementById('myForm').style.display='none';
-            document.getElementById('UN').value="";
-            document.getElementById('PW').value="";
-
-        }
-    </script>
-    
     <div class="div2" id="signupForm">
-        <form action="/signup" method="POST">
+        <form name="myForms" method="POST" action="/signup" onsubmit="return validate()">
             <label style="color: white; font-family: Ubuntu; font-weight: bold; font-size: 25px; text-decoration: underline;">SIGN UP </label>
             <br><br>
             <label for="fname" style="color: white; font-family: Ubuntu; font-weight: bold;">First Name :</label>
@@ -88,25 +114,5 @@
             <br>
         </form>
     </div>
-
-    <script type="text/javascript">
-
-        function opensignup() {
-            document.getElementById('myForm').style.display='none';
-            document.getElementById('UN').value="";
-            document.getElementById('PW').value="";
-            $("#signupForm").fadeIn(500);
-        }
-
-        function closesignup() {
-            document.getElementById('signupForm').style.display='none';
-            document.getElementById('fname').value="";
-            document.getElementById('lname').value="";
-            document.getElementById('email').value="";
-            document.getElementById('usn').value="";
-            document.getElementById('pwd').value="";
-
-        }
-    </script>
 </body>
 </html>
