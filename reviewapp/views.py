@@ -5,6 +5,7 @@ from django.template import loader
 from django import forms
 from .dbactions import *
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
 #from .models import
 # Create your views here.
 
@@ -102,7 +103,20 @@ def login_user(request):
 @csrf_exempt
 def signup_user(request):
     
-    new_usn = request.POST['']
-    new_pwd = request.POST['']
-    new_email = request.POST['']
+    new_usn = request.POST['usn']
+    new_pwd = request.POST['pwd']
+    new_email = request.POST['mail']
+    new_fname = request.POST['fname']
+    new_lname = request.POST['lname']
     
+    user = User.objects.create_user(new_usn, email=new_email, password=new_pwd)
+    
+    user.first_name = new_fname
+    user.last_name = new_lname
+    user.save()
+    
+    if user is not None:
+        login(request,user)
+        return redirect('/write-review')
+    else:
+        return redirect('/')
