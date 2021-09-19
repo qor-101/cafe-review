@@ -5,8 +5,8 @@
   <head>
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Write your Review</title>
-    <h2><center><em> Fill in your Review </em></center></h2>
+    <title >Write your Review</title>
+    <h2 style="color: white;"><center><em> Fill in your Review </em></center></h2>
   </head>
   <script>
 
@@ -15,7 +15,7 @@
     <br>
     <div>
       <form action="/upload" method="POST">
-        <label for="branch">Discipline&emsp;&emsp;</label>
+        <label for="branch" style="color: white;">Discipline&emsp;&emsp;</label>
         <select id ="branch" name = "branch">
           <option value="Arts">Arts</option>
           <option value="Engineering">Engineering</option>
@@ -24,13 +24,13 @@
         </select>
         <br>
         <br>
-        <label for="college">College Name:</label><br>
+        <label for="college" style="color: white;">College Name:</label><br>
         <input type="text" id="college" name="college"><br>
-        <label for="course">Course Name:</label><br>
+        <label for="course" style="color: white;">Course Name:</label><br>
         <input type="text" id="course" name="course"><br>
-        <label for="review">Compose your Review Here:</label><br>
+        <label for="review" style="color: white;">Compose your Review Here:</label><br>
         <textarea id="review" name="review" rows="10" cols="75"></textarea><br><br>
-        <button id = submit"> Submit Review </button>
+        <button id = "submit"> Submit Review </button>
       </form> 
     </div>
   </body>

@@ -118,6 +118,7 @@ body{
     }
 #a1{
     color: white;
+    cursor: pointer;
     }
 #button2:hover{
     cursor: pointer;

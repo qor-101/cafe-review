@@ -46,6 +46,7 @@
                 border-bottom: solid white;
                 outline: none;
                 color: white;
+                text-decoration-color: white;
             }
 
             #branch{
@@ -54,6 +55,7 @@
                 background: transparent;
                 height: 30px;
                 width: 100px;
+                text-decoration-color: white;
             }
 
             option{
