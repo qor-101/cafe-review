@@ -7,7 +7,6 @@
             }
             .button{
                 margin-left: 40%;
-                margin-right: 25%;
                 width: 100px;
                 height: 30px;
                 border-radius: 20px;
@@ -16,6 +15,21 @@
                 color: white;
             }
             .button:hover{
+                background-color: white;
+                color: black;
+                transition: 0.8s;
+                cursor: pointer;
+            }
+            .button1{
+                margin-left: 12px;
+                width: 100px;
+                height: 30px;
+                border-radius: 20px;
+                border-color: white;
+                background-color: rgba(0, 0, 0, 0);
+                color: white;
+            }
+            .button1:hover{
                 background-color: white;
                 color: black;
                 transition: 0.8s;
@@ -62,3 +76,20 @@
                 background-color: black;
                 font-size: 16px;
             } 
+
+            .back{
+                margin-left: 12px;
+                width: 100px;
+                height: 30px;
+                border-radius: 20px;
+                border-color: white;
+                background-color: rgba(0, 0, 0, 0);
+                color: white;
+            }
+
+            .back:hover{
+                background-color: white;
+                color: black;
+                transition: 0.8s;
+                cursor: pointer;
+            }

@@ -15,6 +15,9 @@
           return false;
         }
       }
+      function goBack(){
+        window.history.back();
+      }
     </script>
     <body>
         
@@ -36,7 +39,8 @@
                 <label for="course">Course Name:&emsp;&emsp;</label>
                 <input type="text" id="course" name="course"><br><br><br>
                 <input type="submit" class="button" name="submitbutton" id="submitbutton" value="Search">
-            </form>
+                <button class="button1" onclick="goBack()">Back</button>
+          </form>
         </div>
     </body>
 </html>
