@@ -43,7 +43,8 @@
                 border: none;
             }
             #searchDiv{
-                border: 2px solid rgb(161, 15, 15);
+                border-style: solid;
+                border-color: white;
                 border-radius: 30px;
                 height: 300px;
                 width: 500px;
