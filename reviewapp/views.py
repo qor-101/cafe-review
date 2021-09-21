@@ -15,7 +15,8 @@ def index(request):
 
 @csrf_exempt
 def new_review(request):
-    return render(request,"review.html")
+    c = {'bool':'New'}
+    return render(request,"review.html",c,content_type='text/html')
 
 @csrf_exempt
 def upload_review(request):
@@ -33,25 +34,20 @@ def upload_review(request):
     coll_name = college_name
     
     doc = {
-        "college":request.POST['college'],
-        "course":request.POST['course'],
+        "user":request.user.username,
+        "college":request.POST['college'].lower(),
+        "course":request.POST['course'].lower(),
         "review":request.POST['review'],
     }
     
     flag = func_upload(db_name,coll_name,doc)
-    
+
     if flag:
-        return redirect('/upload-success')
+        c = {'bool':'Success'}        
+        return render(request,"review.html",c,content_type='text/html')
     else:
-        return redirect('/upload-failed')
-
-@csrf_exempt
-def upload_success(request):
-    return HttpResponse("Your review was recorded Successfully")
-
-@csrf_exempt
-def upload_failed(request):
-    return HttpResponse("Something is not right, Please Try Again")
+        c = {'bool':'Failed'}
+        return render(request,"review.html",c,content_type='text/html')
 
 @csrf_exempt
 def search(request):
@@ -64,33 +60,31 @@ def fetch(request):
     college_name = college_name.replace(" ","")
     college_name = college_name.lower()
     
-    kei = { 'course' : request.POST['course'] }
+    kei = { 'course' : request.POST['course'].lower() }
     
     returned = func_retreive(request.POST['branch'],college_name,kei)
     
     res = []
     for x in returned:
+        x['college']=x['college'].title()
+        x['course']=x['course'].title()
         res.append(x)
 
     if(len(res)==0):
-        return redirect('/noresults')
+        c = {'bool':'No'}        
+        return render(request,"search.html",c,content_type='text/html')
+    else:
+        global cx
+        cx = {'items':res}
+        return redirect('/results')
 
-    global c
-    c = {'items':res}
-    
-    return redirect('/results')
 
 @csrf_exempt
 def results(request):
-    return render(request,"results.html",c,content_type='text/html')
-
-@csrf_exempt
-def noresults(request):
-    return HttpResponse("No Reviews Found :(")
+    return render(request,"results.html",cx,content_type='text/html')
 
 @csrf_exempt
 def login_user(request):
-    
     cand_usn = request.POST['UN']
     cand_pwd = request.POST['PW']
     user = authenticate(request, username = cand_usn, password = cand_pwd)
@@ -102,7 +96,6 @@ def login_user(request):
 
 @csrf_exempt
 def signup_user(request):
-    
     new_usn = request.POST['usn']
     new_pwd = request.POST['pwd']
     new_email = request.POST['mail']

@@ -52,6 +52,13 @@
           return false;
         }
       }
+    if('{{ bool }}'=="Success"){
+      alert('Your Review was Uploaded Successfully');
+    }
+    else if('{{ bool }}'=="Failed")
+    {
+      alert('Your Review was not Uploaded, Try Again');
+    }
     </script>
 
   <header style="background-color: black;">
