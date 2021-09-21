@@ -16,6 +16,7 @@
     
 </head>
 <script type="text/javascript">
+    
     function validate() {
             var fname = document.forms["myForms"]["fname"].value;
             var lname = document.forms["myForms"]["lname"].value;
@@ -55,7 +56,7 @@
 
     </script>
 <body>
-    <div style="position: relative;" id="HP">
+    <div  style="position: relative;" id="HP">
 
 	   <div class="logo">
             <img src="{% static 'app1.png' %}" style="float:left;" alt="logo" height="55px" width="70px">
@@ -70,25 +71,31 @@
         <br><br>
 
         <a href="search"><button id="button">see reviews</button></a>
-        <button id="button1">write reviews</button> 
+        <button id="button1" >write reviews</button> 
     </div>
 
-    <div class="div1" id="myForm">
-        <form action="/login" method="POST">
-            <label style="color: white; font-family: Ubuntu; font-weight: bold; font-size: 25px; text-decoration: underline;">LOGIN </label>
-            <br><br>
-            <label for="UN" style="color: white; font-family: Ubuntu; font-weight: bold;">Username :</label>
-            <input type="text" name="UN" id="UN" required>
-            <br><br>
-            <label for="PW" style="color: white; font-family: Ubuntu; font-weight: bold;">Password: </label>
-            <input type="password" name="PW" id="PW" required>
-            <br><br>
-            <input type="submit" name="button2" value="Login" id="button2">
-            <input type="reset" name="button3" value="close" id="button3" onclick="closeform()">
-            <br>
-            <label style="color: white;">Don't have an account?</label>
-            <a id="a1" onclick="opensignup()">Signup</a>
-        </form>
+    <div class="div1" id="myForm"> 
+        <div class="form">
+            <form action="/login" method="POST" >
+                <br><br><label style="color:#EC732B; margin-left:10%; font-family: Ubuntu; font-weight: bold; font-size: 32px;">Welcome back!! </label>
+                <br><br><br><br>
+                <label for="UN" style="color:blue; margin-left:10%; font-family: Ubuntu; font-weight: bold;">Username :</label>
+                <input type="text" name="UN" id="UN" required>
+                <br><br>
+                <label for="PW" style="color:blue;margin-left:10%;font-family: Ubuntu; font-weight: bold;">Password: </label>
+                <input type="password" name="PW" id="PW" required>
+                <br><br>
+                <input type="submit" name="button2" value="Login" id="button2">
+                <input type="reset" name="button3" value="close" id="button3" onclick="closeform()">
+                <br>
+                <label style="color: blue;">Don't have an account?</label>
+                <a id="a1"style="color:blue;" onclick="opensignup()">Signup</a>
+            </form>
+        </div>
+        <div class="pic">
+            <img id="imgg" src="{% static 'login.jpg' %}"  alt="login image">
+        
+        </div>
     </div>
     
     <div class="div2" id="signupForm">

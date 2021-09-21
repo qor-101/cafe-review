@@ -27,7 +27,7 @@ body{
     font-weight:lighter;
     line-height: 1.7em;
     text-align: justify;
-    width:40%;
+    width:40%; 
     font-family:Ubuntu;
     }
 #button{
@@ -71,15 +71,37 @@ body{
 .div1{
     display: none;  
     position: absolute;
-    top: 220px;
-    left: 500px;
-    background-color: rgba(0, 0, 0, 0.85);
-    height: 185px;
-    width: 300px;
-    text-align: center;
-    border-radius: 20px;
-    border: 2px solid white;    
+    top: 20%;
+    left: 22%;
+    background-color:white;
+    height: 60%;
+    width: 55%;
+    
+    border-radius:10px;
+        
     }
+.form{
+    float:left;
+    width:50%;
+}
+.pic{
+    
+    float:right;
+    width:49%;
+    
+}
+#imgg{
+    height:28.313rem;
+    width:28.75rem;
+    max-width:100%;
+    max-height:100%;
+    overflow: hidden;
+    object-fit:cover;
+    display: inline-block;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
 .div2{
     display: none;  
     position: absolute;
@@ -95,14 +117,14 @@ body{
 #button2{
         font-family: Ubuntu;
         border-radius: 10px;
-        background-color: white;
-        color: black;
+        background-color:black;
+        color: blue;
     }
 #button3{
     font-family: Ubuntu;
     border-radius: 10px;
-    background-color: white;
-    color: black;
+    background-color:black;
+    color: blue;
     }
 #button4{
         font-family: Ubuntu;
