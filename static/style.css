@@ -80,11 +80,21 @@ body{
     }
 .form{
     float:left;
-    width:50%
+    width:50%;
 }
 .pic{
     
     float:right;
+    width:49%;
+    height:  100%;    
+}
+.form1{
+    float:right;
+    width:50%;
+}
+.pic1{
+    
+    float:left;
     width:49%;
     height:  100%;    
 }
@@ -96,20 +106,21 @@ body{
     overflow: hidden;
     object-fit:cover;
     display: inline-block;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
 .div2{
-    display: none;  
-    position: absolute;
-    top: 220px;
-    left: 500px;
-    background-color: rgba(0, 0, 0, 0.85);
-    height: 280px;
-    width: 300px;
-    text-align: center;
-    border-radius: 20px;
-    border: 2px solid white;    
+    
+        display: none;  
+        position: absolute;
+        top: 20%;
+        left: 22%;
+        background-color:white;
+        height: 60%;
+        width: 55%;
+        border-radius:10px;
+            
+        
     }
 #button2{
         font-family: Ubuntu;
@@ -134,15 +145,25 @@ body{
 #button4{
         font-family: Ubuntu;
         border-radius: 10px;
-        background-color: white;
-        color: black;
+        border: none;
+        background-color: #EC732B;
+        height: 2rem;
+        width: 5rem;
+        color: white;
+        margin-left: 25%;
     }
 #button5{
-    font-family: Ubuntu;
-    border-radius: 10px;
-    background-color: white;
-    color: black;
+        font-family: Ubuntu;
+        border-radius: 10px;
+        border: none;
+        background-color: #EC732B;
+        height: 2rem;
+        width: 5rem;
+        color: white;
+        margin-left: 5%;
     }
+
+
 #a1{
     color: white;
     cursor: pointer;
@@ -158,10 +179,13 @@ body{
 }
 #button4:hover{
     cursor: pointer;
+    background-color: #E55702;
 }
 #button5:hover{
     cursor: pointer;
+    background-color: #E55703;
 }
+
 
 input{
     height: 1.875rem;
@@ -171,4 +195,16 @@ input{
     background-color: transparent;
     outline: none;
     width: 15.625rem;
+}
+.form1 input{
+    height: 1.975rem;
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    background-color: transparent;
+    margin-bottom:1rem;
+    margin-left:13%;
+    outline: none;
+    width: 15.625rem;
+
 }

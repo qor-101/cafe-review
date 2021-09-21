@@ -108,28 +108,36 @@
     </div>
     
     <div class="div2" id="signupForm">
-        <form name="myForms" method="POST" action="/signup" onsubmit="return validate()">
-            <label style="color: white; font-family: Ubuntu; font-weight: bold; font-size: 25px; text-decoration: underline;">SIGN UP </label>
-            <br><br>
-            <label for="fname" style="color: white; font-family: Ubuntu; font-weight: bold;">First Name :</label>
-            <input type="text" name="fname" id="fname" required>
-            <br><br>
-            <label for="lname" style="color: white; font-family: Ubuntu; font-weight: bold;">Last Name :</label>
-            <input type="text" name="lname" id="lname" required>
-            <br><br>
-            <label for="mail" style="color: white; font-family: Ubuntu; font-weight: bold;">E-mail :</label>
-            <input type="email" name="mail" id="mail" required>
-            <br><br>
-            <label for="usn" style="color: white; font-family: Ubuntu; font-weight: bold;">Username :</label>
-            <input type="text" name="usn" id="usn" required>
-            <br><br>
-            <label for="pwd" style="color: white; font-family: Ubuntu; font-weight: bold;">Password: </label>
-            <input type="password" name="pwd" id="pwd" required>
-            <br><br>
-            <input type="submit" name="button4" value="Sign Up" id="button4">
-            <input type="reset" name="button5" value="close" id="button5" onclick="closesignup()">
-            <br>
-        </form>
+        <div class="pic1">
+            <img id="imgg" src="{% static 'login.jpg' %}"  alt="signup image">
+        </div>
+        <div class="form1">
+            <form name="myForms" method="POST" action="/signup" onsubmit="return validate()">
+                <br><label style="color:#EC732B;margin-left:27%; font-family: Ubuntu; font-weight: bold; font-size: 2rem;">Welcome!! </label>
+                
+                <p style="font-family:Ubuntu; font-size: 1rem; margin-left:15%">Enter the following details to SignUp</p>
+                
+                <input type="text" placeholder="First Name" name="fname" id="fname" required><br>
+                
+                
+                <input type="text" name="lname"placeholder="Last Name" id="lname" required>
+                <br>
+                
+                <input type="email" name="mail"placeholder="E-mail" id="mail" required>
+                <br>
+                
+                <input type="text" name="usn" placeholder="Username" id="usn" required>
+                <br>
+                
+                <input type="password" name="pwd"placeholder="Password" id="pwd" required>
+                <br><br>
+                <button  name="button4"  id="button4">SignUp</button>
+
+                <button  name="button5"  id="button5" onclick="closesignup()">Close</button>
+                <br>
+            </form>
+        </div>
+        
     </div>
 </body>
 </html>
