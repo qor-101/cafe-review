@@ -4,7 +4,6 @@
 body{
 	background-image: url('res.png');
 	background-size: cover;
-   
 	}
 .logo{
 	font-family: Josefin Sans;
@@ -76,19 +75,18 @@ body{
     background-color:white;
     height: 60%;
     width: 55%;
-    
     border-radius:10px;
         
     }
 .form{
     float:left;
-    width:50%;
+    width:50%
 }
 .pic{
     
     float:right;
     width:49%;
-    
+    height:  100%;    
 }
 #imgg{
     height:28.313rem;
@@ -100,7 +98,6 @@ body{
     display: inline-block;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
-    
 }
 .div2{
     display: none;  
@@ -117,14 +114,22 @@ body{
 #button2{
         font-family: Ubuntu;
         border-radius: 10px;
-        background-color:black;
-        color: blue;
+        border: none;
+        background-color: #EC732B;
+        height: 2rem;
+        width: 5rem;
+        color: white;
+        margin-left: 25%;
     }
 #button3{
-    font-family: Ubuntu;
-    border-radius: 10px;
-    background-color:black;
-    color: blue;
+        font-family: Ubuntu;
+        border-radius: 10px;
+        border: none;
+        background-color: #EC732B;
+        height: 2rem;
+        width: 5rem;
+        color: white;
+        margin-left: 5%;
     }
 #button4{
         font-family: Ubuntu;
@@ -141,16 +146,29 @@ body{
 #a1{
     color: white;
     cursor: pointer;
+    text-decoration: underline;
     }
 #button2:hover{
     cursor: pointer;
+    background-color: #E55702;
 }
 #button3:hover{
     cursor: pointer;
+    background-color: #E55703;
 }
 #button4:hover{
     cursor: pointer;
 }
 #button5:hover{
     cursor: pointer;
+}
+
+input{
+    height: 1.875rem;
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    background-color: transparent;
+    outline: none;
+    width: 15.625rem;
 }

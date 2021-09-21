@@ -6,9 +6,32 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title >Write your Review</title>
-    <h2 style="color: white;"><center><em> Fill in your Review </em></center></h2>
     <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Ubuntu');
 
+      .ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+      }
+
+      li a{
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 14px 16px;
+        color: whitesmoke;
+        font-family: Ubuntu;
+        font-size: 1.25rem;
+        float: right;
+      }
+
+      li a:hover{
+        background-color: white;
+        color: black;
+      }
     </style>
   </head>
       <script type="text/javascript">
@@ -30,8 +53,21 @@
         }
       }
     </script>
+
+  <header style="background-color: black;">
+    <ul class="ul">
+      <li><a href="#"> Logout </a></li>
+      <li><a href="#"> Dashboard </a></li>
+      <li><a href="#"> Profile </a></li>
+    </ul>
+  </header>
   <body>
+    <div >
+      
+    </div>
+
     <br>
+    <h2 style="color: white;"><center><em> Fill in your Review </em></center></h2>
     <div>
       <form name="reviewForm" method="POST" action="/upload" onsubmit="return validate()">
         <label for="branch" style="color: white;">Discipline&emsp;&emsp;</label>

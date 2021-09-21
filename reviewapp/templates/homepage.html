@@ -6,6 +6,7 @@
 	<title>homepage-cafe review</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript">
         $(document).ready(function(){
         $("#button1").click(function(){
@@ -13,7 +14,9 @@
         });
     });
     </script>
-    
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Ubuntu');
+    </style>
 </head>
 <script type="text/javascript">
     
@@ -77,22 +80,27 @@
     <div class="div1" id="myForm"> 
         <div class="form">
             <form action="/login" method="POST" >
-                <br><br><label style="color:#EC732B; margin-left:10%; font-family: Ubuntu; font-weight: bold; font-size: 32px;">Welcome back!! </label>
-                <br><br><br><br>
-                <label for="UN" style="color:blue; margin-left:10%; font-family: Ubuntu; font-weight: bold;">Username :</label>
-                <input type="text" name="UN" id="UN" required>
-                <br><br>
-                <label for="PW" style="color:blue;margin-left:10%;font-family: Ubuntu; font-weight: bold;">Password: </label>
-                <input type="password" name="PW" id="PW" required>
-                <br><br>
-                <input type="submit" name="button2" value="Login" id="button2">
-                <input type="reset" name="button3" value="close" id="button3" onclick="closeform()">
+                <br><br><label style="color:#EC732B; margin-left: 20%; font-family: Ubuntu; font-weight: bold; font-size: 2rem;">Welcome back!! </label>
+                <br><br><br>    
                 <br>
-                <label style="color: blue;">Don't have an account?</label>
-                <a id="a1"style="color:blue;" onclick="opensignup()">Signup</a>
+                <div style="font-size: 1.25rem; margin-left:10%;">
+                    <i class="fa fa-user icon w3-xlarge"></i>
+                    <input type="text" placeholder="Username" name="UN" id="UN" required>
+                </div>    
+                <br><br>
+                <div style="font-size: 1.25rem; margin-left: 10%;">
+                    <i class="fa fa-key icon"></i>
+                    <input type="password" placeholder="Password" name="PW" id="PW" required>
+                </div>
+                <br><br>
+                <button name="button2" id="button2">Login</button>
+                <button name="button3" id="button3" onclick="closeform()">Close</button>
+                <br><br>
+                <label style="color: black;font-family: Ubuntu;margin-left: 20%; ">Don't have an account?</label>
+                <a id="a1"style="color:grey;" onclick="opensignup()">Signup</a>
             </form>
         </div>
-        <div class="pic">
+        <div class="pic">   
             <img id="imgg" src="{% static 'login.jpg' %}"  alt="login image">
         
         </div>
