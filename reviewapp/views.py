@@ -6,12 +6,14 @@ from django import forms
 from .dbactions import *
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
+import sqlite3
 #from .models import
 # Create your views here.
 
 @csrf_exempt
 def index(request):
-    return render(request,"homepage.html")
+    c = {'check':"NOT"}
+    return render(request,"homepage.html",c,content_type='text/html')
 
 @csrf_exempt
 def new_review(request):
@@ -101,15 +103,24 @@ def signup_user(request):
     new_email = request.POST['mail']
     new_fname = request.POST['fname']
     new_lname = request.POST['lname']
-    
-    user = User.objects.create_user(new_usn, email=new_email, password=new_pwd)
-    
-    user.first_name = new_fname
-    user.last_name = new_lname
-    user.save()
-    
-    if user is not None:
-        login(request,user)
-        return redirect('/write-review')
+
+    mydb = sqlite3.connect("db.sqlite3")
+    mycursor = mydb.cursor()  
+    res = mycursor.execute('SELECT username FROM auth_user')
+    lis=[]
+    for i in res:
+        lis.append(i[0])
+    if(new_usn in lis):
+        c = {'check':"Exists"}
+        return render(request,"homepage.html",c,content_type='text/html')
     else:
-        return redirect('/')
+        user = User.objects.create_user(new_usn, email=new_email, password=new_pwd)
+        user.first_name = new_fname
+        user.last_name = new_lname
+        user.save()
+    
+        if user is not None:
+            login(request,user)
+            return redirect('/write-review')
+        else:
+            return redirect('/')
