@@ -9,11 +9,13 @@ from django.contrib.auth.models import User
 import sqlite3
 #from .models import
 # Create your views here.
-
+mx=0
 @csrf_exempt
 def index(request):
-    c = {'check':"NOT"}
-    return render(request,"homepage.html",c,content_type='text/html')
+    if(mx==0):
+        return render(request,"homepage.html",{'check':"NOT"},content_type='text/html')
+    elif(mx==1):
+        return render(request,"homepage.html",{'check':"Exists"},content_type='text/html')
 
 @csrf_exempt
 def new_review(request):
@@ -111,8 +113,9 @@ def signup_user(request):
     for i in res:
         lis.append(i[0])
     if(new_usn in lis):
-        c = {'check':"Exists"}
-        return render(request,"homepage.html",c,content_type='text/html')
+        global mx
+        mx=1
+        return redirect("/")
     else:
         user = User.objects.create_user(new_usn, email=new_email, password=new_pwd)
         user.first_name = new_fname

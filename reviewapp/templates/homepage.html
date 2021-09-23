@@ -59,12 +59,14 @@
             document.getElementById('PW').value="";
 
         }
+    </script>
+    <script type="text/javascript">
         if('{{ check }}'=="Exists"){
             alert("Username not available");
-            //document.getElementById('signupForm').style.display='block';
-            $("#signupForm").fadeIn(500);
+            $(document).ready(function(){
+                $("#signupForm").fadeIn(500);
+            });
         }
-
     </script>
 <body>
     <div  style="position: relative;" id="HP">
