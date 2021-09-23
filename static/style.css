@@ -136,6 +136,7 @@ body{
         
     }
 #button2{
+        margin-top: 5%;
         font-family: Ubuntu;
         border-radius: 10px;
         border: none;
@@ -146,6 +147,7 @@ body{
         margin-left: 25%;
     }
 #button3{
+        margin-top:5% ;
         font-family: Ubuntu;
         border-radius: 10px;
         border: none;
