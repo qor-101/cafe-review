@@ -12,9 +12,11 @@ import sqlite3
 mx=0
 @csrf_exempt
 def index(request):
+    global mx
     if(mx==0):
         return render(request,"homepage.html",{'check':"NOT"},content_type='text/html')
     elif(mx==1):
+        mx=0
         return render(request,"homepage.html",{'check':"Exists"},content_type='text/html')
 
 @csrf_exempt

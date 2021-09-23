@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
 <html>    
-  
   <head>
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -32,9 +31,9 @@
         background-color: white;
         color: black;
       }
-    </style>
+     </style>
   </head>
-      <script type="text/javascript">
+  <script type="text/javascript">
       function validate() {
         var col = document.forms["reviewForm"]["college"].value;
         var course = document.forms["reviewForm"]["course"].value;
@@ -59,21 +58,17 @@
     {
       alert('Your Review was not Uploaded, Try Again');
     }
-    </script>
-
-  <header style="background-color: black;">
-    <ul class="ul">
-      <li><a href="#"> Logout </a></li>
-      <li><a href="#"> Dashboard </a></li>
-      <li><a href="#"> Profile </a></li>
-    </ul>
-  </header>
+  </script>
+  
   <body>
-    <div >
-      
+    <div>
+      <ul class="ul">
+        <li><a href="#"> Logout </a></li>
+       <li><a href="#"> Dashboard </a></li>
+        <li><a href="#"> Profile </a></li>
+      </ul>
     </div>
 
-    <br>
     <h2 style="color: white;"><center><em> Fill in your Review </em></center></h2>
     <div>
       <form name="reviewForm" method="POST" action="/upload" onsubmit="return validate()">
