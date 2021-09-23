@@ -118,32 +118,32 @@
     
     <div class="div2" id="signupForm">
         <div class="pic1">
-            <img id="imgg" src="{% static 'login.jpg' %}"  alt="signup image">
+            <img id="imgg1" src="{% static 'login.jpg' %}"  alt="signup image">
         </div>
         <div class="form1">
             <form name="myForms" method="POST" action="/signup" onsubmit="return validate()">
-                <br><label style="color:#EC732B;margin-left:27%; font-family: Ubuntu; font-weight: bold; font-size: 2rem;">Welcome!! </label>
+                <label style="color:#EC732B;display: block; text-align: center; margin-top: 1%; font-family: Ubuntu; font-weight: bold; font-size: 200%;">Welcome!! </label>
                 
                 <p style="font-family:Ubuntu; font-size: 1rem; margin-left:15%">Enter the following details to SignUp</p>
                 
-                <input type="text" placeholder="First Name" name="fname" id="fname" required><br>
+                <input type="text" placeholder="First Name" name="fname" id="fname" required>
                 
                 
                 <input type="text" name="lname"placeholder="Last Name" id="lname" required>
-                <br>
+                
                 
                 <input type="email" name="mail"placeholder="E-mail" id="mail" required>
-                <br>
+                
                 
                 <input type="text" name="usn" placeholder="Username" id="usn" required>
-                <br>
+                
                 
                 <input type="password" name="pwd"placeholder="Password" id="pwd" required>
-                <br><br>
+                
                 <button  name="button4"  id="button4" >SignUp</button>
 
                 <button  name="button5"  id="button5" onclick="closesignup()">Close</button>
-                <br>
+                
             </form>
         </div>
         

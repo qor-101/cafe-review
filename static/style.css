@@ -111,6 +111,17 @@ body{
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }
+#imgg1{
+    height:28.313rem;
+    width:28.75rem;
+    max-width:100%;
+    max-height:100%;
+    overflow: hidden;
+    object-fit:cover;
+    display: inline-block;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
 .div2{
     
         display: none;  
@@ -153,6 +164,7 @@ body{
         width: 5rem;
         color: white;
         margin-left: 25%;
+        margin-top:5% ;
     }
 #button5{
         font-family: Ubuntu;
@@ -163,6 +175,7 @@ body{
         width: 5rem;
         color: white;
         margin-left: 5%;
+        margin-top: 5%;
     }
 
 
@@ -204,7 +217,7 @@ input{
     border-bottom-style: solid;
     border-bottom-color: black;
     background-color: transparent;
-    margin-bottom:1rem;
+    margin-bottom:2%;
     margin-left:13%;
     outline: none;
     width: 15.625rem;
