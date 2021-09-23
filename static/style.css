@@ -7,7 +7,7 @@ body{
 	}
 .logo{
 	font-family: Josefin Sans;
-    font-size: 1.563rem ;
+    font-size: 175% ;
     margin-top: 4%;
 	margin-left:10%;
 	color: white;   
@@ -17,14 +17,14 @@ body{
     margin-top: 7%;
     font-family:Montserrat; 
     font-weight:bolder;
-    font-size: 3.75rem;
+    font-size: 380%;
     color: white;
     margin-left: 10%;
     }
 .para{
     margin-left: 10%;
     color:#c7c1c1;
-    font-size:1.125rem;
+    font-size: 120%;
     font-weight:lighter;
     line-height: 150%;
     text-align: justify;
@@ -42,7 +42,7 @@ body{
     font-family:ubuntu;
     font-size: 1.125rem;
     margin-left: 10%;
-    margin-top: 1.25rem;
+    margin-top: 2%;
     }
 #button1{
     width: 12%;
@@ -55,7 +55,7 @@ body{
     font-family:ubuntu;
     font-size: 1.125rem;
     margin-left: 2%;
-    margin-top: 1.25rem;
+    margin-top: 2%;
     }
 #button:hover{
     background-color: white;
