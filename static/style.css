@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Ubuntu');
+    @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body{
@@ -8,30 +8,31 @@ body{
 .logo{
 	font-family: Josefin Sans;
     font-size: 1.563rem ;
-    margin-top: 2.563rem;
-	margin-left:8.063rem;
+    margin-top: 4%;
+	margin-left:10%;
 	color: white;   
 	}
 #tag{
-    margin-top: 10rem;
+    display: block;
+    margin-top: 7%;
     font-family:Montserrat; 
     font-weight:bolder;
     font-size: 3.75rem;
     color: white;
-    margin-left: 8.0625rem;
+    margin-left: 10%;
     }
 .para{
-    margin-left: 8.313rem;
+    margin-left: 10%;
     color:#c7c1c1;
     font-size:1.125rem;
     font-weight:lighter;
-    line-height: 1.7rem;
+    line-height: 150%;
     text-align: justify;
     width:40%; 
     font-family:Ubuntu;
     }
 #button{
-    width:9.375rem;
+    width: 12%;
     height:2.813rem;
     border-width:0.125rem;
     border-color:white;
@@ -40,11 +41,11 @@ body{
     color:white;
     font-family:ubuntu;
     font-size: 1.125rem;
-    margin-left: 8.063rem;
+    margin-left: 10%;
     margin-top: 1.25rem;
     }
 #button1{
-    width:9.375rem;
+    width: 12%;
     height:2.813rem;
     border-width:0.125rem;
     border-color:white;
@@ -53,7 +54,7 @@ body{
     color:white;
     font-family:ubuntu;
     font-size: 1.125rem;
-    margin-left: 1.25rem;
+    margin-left: 2%;
     margin-top: 1.25rem;
     }
 #button:hover{
