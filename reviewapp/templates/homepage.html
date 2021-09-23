@@ -10,10 +10,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript">
         $(document).ready(function(){
-        $("#button1").click(function(){
-        $("#myForm").fadeIn(500);
+            $("#button1").click(function(){
+                $("#myForm").fadeIn(500);
+                $("#HP").css("filter", "blur(10px)");
+            });
         });
-    });
+        $(document).ready(function(){
+            $("#button5").click(function(){
+                $("#HP").css("filter", "blur(0)");
+                });
+            });
     </script>
 
     <style type="text/css">
@@ -39,8 +45,7 @@
             document.getElementById('myForm').style.display='none';
             document.getElementById('UN').value="";
             document.getElementById('PW').value="";
-            $("#signupForm").fadeIn(500);
-            
+            $("#signupForm").fadeIn(500);        
         }
 
         function closesignup() {
@@ -50,13 +55,13 @@
             document.getElementById('email').value="";
             document.getElementById('usn').value="";
             document.getElementById('pwd').value="";
-
         }
 
         function closeform() {
             document.getElementById('myForm').style.display='none';
             document.getElementById('UN').value="";
             document.getElementById('PW').value="";
+            $("#HP").css("filter", "blur(0)");
 
         }
     </script>
