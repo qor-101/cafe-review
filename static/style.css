@@ -7,53 +7,54 @@ body{
 	}
 .logo{
 	font-family: Josefin Sans;
-    font-size:1.5625em;
-    margin-top: 2.5625em;
-	margin-left:5.0625em;
+    font-size: 1.563rem ;
+    margin-top: 2.563rem;
+	margin-left:8.063rem;
 	color: white;   
 	}
 #tag{
+    margin-top: 10rem;
     font-family:Montserrat; 
     font-weight:bolder;
-    font-size: 3.75em;
+    font-size: 3.75rem;
     color: white;
-    margin-left: 2.0625em;
+    margin-left: 8.0625rem;
     }
 .para{
-    margin-left:7.0625em;
+    margin-left: 8.313rem;
     color:#c7c1c1;
-    font-size:1.125em;
+    font-size:1.125rem;
     font-weight:lighter;
-    line-height: 1.7em;
+    line-height: 1.7rem;
     text-align: justify;
     width:40%; 
     font-family:Ubuntu;
     }
 #button{
-    width:9.375em;
-    height:2.8125em;
-    border-width:0.125em;
+    width:9.375rem;
+    height:2.813rem;
+    border-width:0.125rem;
     border-color:white;
-    border-radius:1.25em;
+    border-radius:1.25rem;
     background-color:rgba(0, 0, 0, 0);
     color:white;
     font-family:ubuntu;
-    font-size: 1.125em;
-    margin-left: 7.0625em;
-    margin-top: 1.25em;
+    font-size: 1.125rem;
+    margin-left: 8.063rem;
+    margin-top: 1.25rem;
     }
 #button1{
-    width:9.375em;
-    height:2.8125em;
-    border-width:0.125em;
+    width:9.375rem;
+    height:2.813rem;
+    border-width:0.125rem;
     border-color:white;
-    border-radius:1.25em;
+    border-radius:1.25rem;
     background-color:rgba(0, 0, 0, 0);
     color:white;
     font-family:ubuntu;
-    font-size: 1.125em;
-    margin-left: 1.25em;
-    margin-top: 1.25em;
+    font-size: 1.125rem;
+    margin-left: 1.25rem;
+    margin-top: 1.25rem;
     }
 #button:hover{
     background-color: white;
@@ -106,8 +107,8 @@ body{
     overflow: hidden;
     object-fit:cover;
     display: inline-block;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
 }
 .div2{
     

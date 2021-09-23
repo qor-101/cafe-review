@@ -59,9 +59,9 @@
             document.getElementById('PW').value="";
 
         }
-
         if('{{ check }}'=="Exists"){
             alert("Username not available");
+            //document.getElementById('signupForm').style.display='block';
             $("#signupForm").fadeIn(500);
         }
 
@@ -71,10 +71,10 @@
 
 	   <div class="logo">
             <img src="{% static 'app1.png' %}" style="float:left;" alt="logo" height="55px" width="70px">
-            <p style="padding-top:18px;"><b>Course</b>bay</p>
+            <p style="padding-top:1.125rem;"><b>Course</b>bay</p>
         </div>
 
-        <br><br><br>
+        <!--<br><br><br>-->
 
         <span id="tag">Rate. Review. Represent.</span>
         <p class="para">Coursebay is a website hosting reviews of university courses and instructors. Reviews are written by present and past students taking the specific course. Reviews are accesible through a simple search or through categorically choosing college, department and course.</p>
