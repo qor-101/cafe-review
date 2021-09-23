@@ -78,7 +78,7 @@ body{
     height: 60%;
     width: 55%;
     border-radius:10px;
-        
+    box-shadow: 0px 5px 15px 10px #545454;
     }
 .form{
     float:left;
@@ -132,8 +132,7 @@ body{
         height: 60%;
         width: 55%;
         border-radius:10px;
-            
-        
+        box-shadow: 0px 5px 15px 10px #545454;
     }
 #button2{
         margin-top: 5%;
