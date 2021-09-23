@@ -8,13 +8,13 @@ body{
 .logo{
 	font-family: Josefin Sans;
     font-size: 175% ;
-    margin-top: 4%;
+    margin-top: 3%;
 	margin-left:10%;
 	color: white;   
 	}
 #tag{
     display: block;
-    margin-top: 7%;
+    margin-top: 6%;
     font-family:Montserrat; 
     font-weight:bolder;
     font-size: 380%;
@@ -28,7 +28,7 @@ body{
     font-weight:lighter;
     line-height: 150%;
     text-align: justify;
-    width:40%; 
+    width: 32rem; 
     font-family:Ubuntu;
     }
 #button{
