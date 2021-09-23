@@ -16,11 +16,12 @@
 
       .rForm{
         margin-left: 20%;
+        margin-top: 5%;
         width: 60%;
         background-color: white;
         border-radius:10px;
         box-shadow: 0px 5px 15px 10px #545454;
-        background-color: black;
+        background-color: white;
       }
 
       .ul{
@@ -46,6 +47,18 @@
       li a:hover{
         background-color: white;
         color: black;
+      }
+
+      label{
+          color: black;
+      }
+
+      #submit{
+        background-color: white;
+        border: none;
+        border-bottom-color: black;
+        width: 10rem;
+        font-size: 1rem;
       }
      </style>
   </head>
@@ -86,9 +99,9 @@
     </div>
 
     <div class="rForm">
-      <h2 style="color: white;"><center><em> Fill in your Review </em></center></h2><br>
+      <label style="display: block; margin-top: 5%;font-family: Ubuntu;font-size: 150%;"><center> Fill in your Review </center></label><br>
       <form name="reviewForm" method="POST" action="/upload" onsubmit="return validate()">
-        <label for="branch" style="color: white;">Discipline&emsp;&emsp;</label>
+        <label for="branch" >Discipline&emsp;&emsp;</label>
         <select id ="branch" name = "branch" required>
           <option value="" selected disabled hidden>Select your choice</option>
           <option value="Arts">Arts</option>
@@ -98,11 +111,11 @@
         </select>
         <br>
         <br>
-        <label for="college" style="color: white;">College Name:</label><br>
+        <label for="college" >College Name:</label><br>
         <input type="text" id="college" name="college"><br>
-        <label for="course" style="color: white;">Course Name:</label><br>
+        <label for="course" >Course Name:</label><br>
         <input type="text" id="course" name="course"><br>
-        <label for="review" style="color: white;">Compose your Review Here:</label><br>
+        <label for="review" >Compose your Review Here:</label><br>
         <textarea id="review" name="review" rows="10" cols="75"></textarea><br><br>
         <input type="submit" value="Post Review" id="submit"><br><br><br>
       </form> 
