@@ -10,14 +10,22 @@ import sqlite3
 #from .models import
 # Create your views here.
 mx=0
+s=0
 @csrf_exempt
 def index(request):
     global mx
-    if(mx==0):
+    global s
+    if(mx==0 and s==0):
         return render(request,"homepage.html",{'check':"NOT"},content_type='text/html')
     elif(mx==1):
         mx=0
         return render(request,"homepage.html",{'check':"Exists"},content_type='text/html')
+    elif(s==1):
+        s=0
+        return render(request,"homepage.html",{'check':"NOT Exists"},content_type='text/html')
+    elif(s==2):
+        s=0
+        return render(request,"homepage.html",{'check':"NOT Correct"},content_type='text/html')
 
 @csrf_exempt
 def new_review(request):
@@ -98,7 +106,16 @@ def login_user(request):
         login(request, user)
         return redirect('/write-review')
     else:
-        return redirect('/')
+        user_list = get_user()
+        global s
+        if(cand_usn not in user_list):
+            s=1
+            return redirect("/") 
+        else:
+            s=2
+            return redirect("/")
+
+        
 
 @csrf_exempt
 def signup_user(request):
@@ -108,13 +125,8 @@ def signup_user(request):
     new_fname = request.POST['fname']
     new_lname = request.POST['lname']
 
-    mydb = sqlite3.connect("db.sqlite3")
-    mycursor = mydb.cursor()  
-    res = mycursor.execute('SELECT username FROM auth_user')
-    lis=[]
-    for i in res:
-        lis.append(i[0])
-    if(new_usn in lis):
+    usn_list = get_user()
+    if(new_usn in usn_list):
         global mx
         mx=1
         return redirect("/")

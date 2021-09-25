@@ -72,6 +72,18 @@
                 $("#signupForm").fadeIn(500);
             });
         }
+        else if('{{ check }}' == "NOT Exists"){
+            alert("User does not exist");
+            $(document).ready(function(){
+                $("#myForm").fadeIn(500);
+            });
+        }
+        else if('{{ check }}' == "NOT Correct"){
+            alert("Password is incorrect");
+            $(document).ready(function(){
+                $("#myForm").fadeIn(500);
+            });
+        }
     </script>
 <body>
     <div  style="position: relative;" id="HP">
