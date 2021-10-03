@@ -1,15 +1,73 @@
 <!DOCTYPE html>
 {% load static %}
+
 <html>
-    <head>
-        <title>
-            Search Reviews
-        </title>
-        <link rel="stylesheet" href="{% static 'search.css' %}">
-    </head>
-    <script type="text/javascript">
-      function validate() {
-        var col = document.forms["searchForm"]["college"].value;
+<head>
+	<meta charset="utf-8">
+	<title>Search</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+	@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Ubuntu');
+		body{
+			background-image: url("{% static 'res.png' %}");
+			font-family: ubuntu;
+			background-size: cover;
+		}
+		.searching{
+			display:flex;
+			justify-content: center;
+			margin-top:3%;
+			
+		}
+		.formele{
+			display: block;
+			float: left;
+		}
+		#btn{
+			height: 3.4rem;
+			width: 3.4rem;
+			outline: none;
+			border:none;
+			background-color: #EC732B;
+		}
+		#branch{
+			height: 3.4rem;
+			width:9rem;
+			font-size: 1.25rem;
+			text-align: center;
+			outline: none;
+			color:gray;
+		}
+		#course{
+			height: 3rem;
+			width: 10rem;
+			font-size: 1.25rem;
+			outline: none;
+			text-align: center;
+			caret-color: #EC732B;
+			
+		}
+		#college{
+			height: 3rem;
+			width: 30rem;
+			font-size: 1.25rem;
+			outline: none;
+			padding-left: 1rem;
+			caret-color: #EC732B;
+		}
+		p{
+			text-align: center;
+			font-size: 3rem;
+			color: white;
+			margin-top: 12%;
+		}
+		#ii{
+			border: rgba(247, 247, 250, 0.2) 1rem solid;
+		}
+	</style>
+	<script type="text/javascript">
+		function validate() {
+        var col = document.forms["ii"]["college"].value;
         if (col.length <= 8) {
           alert("College name is too short."); 
           return false;
@@ -18,32 +76,23 @@
           alert('Sorry, No Results Found');
         }
       }
-      function goBack(){
-        window.history.back();
-      }
-    </script>
-    <body>
-        
-        <div id="searchDiv">
-            <h2><center>Search Reviews</center></h2>
-            <form name="searchForm" id="searchForm" action="/fetch" method="POST" class="searchbox" onsubmit="return validate()">
-                <label for="branch">Discipline:&emsp;&emsp;&emsp;&emsp;</label>
-                <select id ="branch" name = "branch" required>
-                    <option value="" selected disabled hidden>Select your choice</option>
-                    <option value="Arts">Arts</option>
-                    <option value="Engineering">Engineering</option>
-                    <option value="Medicine">Medicine</option>
-                    <option value="Law">Law</option>
-                </select>
-                <br>
-                <br>
-                <label for="college">College Name:&emsp;&emsp;</label>
-                <input type="text" id="college" name="college" ><br><br>
-                <label for="course">Course Name:&emsp;&emsp;</label>
-                <input type="text" id="course" name="course"><br><br><br>
-                <input type="submit" class="button" name="submitbutton" id="submitbutton" value="Search">
-                <button class="button1" onclick="goBack()">Back</button>
-          </form>
-        </div>
-    </body>
+	</script>
+</head>
+<body>
+	<p>Search Reviews</p>
+	<div class="searching">
+	<form id="ii" action="/fetch" method="POST" onsubmit="return validate()">
+		<select id ="branch" name = "branch" class="formele" required>
+                    <option class="one" value="" selected disabled hidden>Domain</option>
+                    <option class="one" value="Arts">Arts</option>
+                    <option class="one" value="Engineering">Engineering</option>
+                    <option class="one" value="Medicine">Medicine</option>
+                    <option class="one" value="Law">Law</option>
+        </select>
+		<input type="text" placeholder="Course name" name="course" id="course" class="formele" required>
+		<input type="text" placeholder="CollegeName" name="college" id="college" class="formele">
+		<button type="submit" id="btn"><i class="fa fa-search"></i></button>
+	</form>
+	</div>
+</body>
 </html>
