@@ -13,14 +13,22 @@ body{
 	color: white;   
 	}
 #tag{
-    display: block;
     margin-top: 6%;
-    font-family:Montserrat; 
-    font-weight:bolder;
-    font-size: 380%;
-    color: white;
+    font-size: 500%;
+    font-weight: bolder;
+    color: transparent  ;
     margin-left: 10%;
+    -webkit-text-stroke: 1px #fff;
+    background: url('back.png');
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
     }
+@keyframes back{
+    100%{
+        background-position: 4000px 0;
+    }
+}
 .para{
     margin-left: 10%;
     color:#c7c1c1;
