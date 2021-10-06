@@ -6,6 +6,7 @@ from django import forms
 from .dbactions import *
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
+from datetime import date
 import sqlite3
 #from .models import
 # Create your views here.
@@ -52,6 +53,9 @@ def upload_review(request):
         "college":request.POST['college'].lower(),
         "course":request.POST['course'].lower(),
         "review":request.POST['review'],
+        "date" : str(date.today()),
+        "title" : request.POST['title'],
+        "rating" : request.POST['rating'],
     }
     
     flag = func_upload(db_name,coll_name,doc)
