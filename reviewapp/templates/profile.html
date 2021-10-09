@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>User Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Ubuntu');
+      body{
+        background-image: url("{% static 'res.png' %}");
+        background-size:cover;
+        box-sizing:border-box;
+        margin:0px;
+      }
+      #navBar{
+        background-color:rgba(0,0,0,0.2);
+      }
+      .ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      li a{
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 14px 22px;
+        color: whitesmoke;
+        font-family: Ubuntu;
+        font-size: 1.25rem;
+        float: right;
+        border-color: white;
+      }
+      li a:hover{
+        background-color: white;
+        color: black;
+      }
+      label{
+          color: black;
+          font-family: Ubuntu;
+          color: grey;
+          margin-left: 10%;
+          font-weight: bolder;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navBar">
+      <ul class="ul">
+        <li> <img src="{% static 'app1.png' %}" style="float:left;margin-left:3%;"  alt="logo" height="45px" width="60px"></li>
+        <li style="margin-right:3%;"><a href="#"> Logout </a></li>
+        <li><a href="#"> Dashboard </a></li>
+        <li style= "font-family: Josefin Sans;font-size: 175% ;margin-top:0.7%;color: white;"><b>Course</b>bay</li>
+      </ul>
+    </div>
+    <h2 style="color: bisque;">{{ usn }}<br>
+    {{ fname }}<br>
+    {{ lname }}<br>
+    {{ mail }}</h2>
+  </body>
+</html>

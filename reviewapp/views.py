@@ -119,8 +119,6 @@ def login_user(request):
             s=2
             return redirect("/")
 
-        
-
 @csrf_exempt
 def signup_user(request):
     new_usn = request.POST['usn']
@@ -154,3 +152,13 @@ def signup_user(request):
             return redirect('/write-review')
         else:
             return redirect('/')
+
+@csrf_exempt
+def profile(request):
+    uid = User.objects.get(username=request.user.username)
+    '''
+    column names in db : id,password,username,last_name,first_name,email
+    coress name in form: --,pwd,usn,lname,fname,mail
+    '''
+    doc = {'usn':uid.username,'lname':uid.last_name,'fname':uid.first_name,'mail':uid.email}
+    return render(request,"profile.html",doc,content_type='text/html')
