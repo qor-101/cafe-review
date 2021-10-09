@@ -135,7 +135,7 @@
             <img id="imgg1" src="{% static 'login.jpg' %}"  alt="signup image">
         </div>
         <div class="form1">
-            <form name="myForms" method="POST" action="/signup" onsubmit="return validate()">
+            <form enctype="multipart/form-data" name="myForms" method="POST" action="/signup" onsubmit="return validate()">
                 <label style="color:#EC732B;display: block; text-align: center; margin-top: 1%; font-family: Ubuntu; font-weight: bold; font-size: 200%;">Welcome!! </label>
                 
                 <p style="font-family:Ubuntu; font-size: 1rem; text-align: center;">Enter the following details to SignUp</p>
