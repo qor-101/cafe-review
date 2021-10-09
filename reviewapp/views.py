@@ -128,7 +128,9 @@ def signup_user(request):
     new_email = request.POST['mail']
     new_fname = request.POST['fname']
     new_lname = request.POST['lname']
-
+    picture = request.FILES['pic']
+    im = picture.read()
+    
     usn_list = get_user()
     if(new_usn in usn_list):
         global mx
@@ -139,7 +141,14 @@ def signup_user(request):
         user.first_name = new_fname
         user.last_name = new_lname
         user.save()
-    
+
+        #img upload here
+        conn = sqlite3.connect("userpics.db")
+        curr = conn.cursor()
+        conn.execute("INSERT INTO profilepics VALUES(?,?)", (new_usn,sqlite3.Binary(im)))
+        conn.commit()
+        conn.close()
+        
         if user is not None:
             login(request,user)
             return redirect('/write-review')
