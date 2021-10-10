@@ -7,7 +7,6 @@
             }
             .button{
                 margin-left: 40%;
-                margin-right: 25%;
                 width: 100px;
                 height: 30px;
                 border-radius: 20px;
@@ -21,6 +20,21 @@
                 transition: 0.8s;
                 cursor: pointer;
             }
+            .button1{
+                margin-left: 12px;
+                width: 100px;
+                height: 30px;
+                border-radius: 20px;
+                border-color: white;
+                background-color: rgba(0, 0, 0, 0);
+                color: white;
+            }
+            .button1:hover{
+                background-color: white;
+                color: black;
+                transition: 0.8s;
+                cursor: pointer;
+            }
             body{
                 background-image: url('res.png');
                 background-size: cover;
@@ -29,7 +43,8 @@
                 border: none;
             }
             #searchDiv{
-                border: 2px solid rgb(161, 15, 15);
+                border-style: solid;
+                border-color: white;
                 border-radius: 30px;
                 height: 300px;
                 width: 500px;
@@ -46,6 +61,7 @@
                 border-bottom: solid white;
                 outline: none;
                 color: white;
+                text-decoration-color: white;
             }
 
             #branch{
@@ -54,9 +70,27 @@
                 background: transparent;
                 height: 30px;
                 width: 100px;
+                text-decoration-color: white;
             }
 
             option{
                 background-color: black;
                 font-size: 16px;
             } 
+
+            .back{
+                margin-left: 12px;
+                width: 100px;
+                height: 30px;
+                border-radius: 20px;
+                border-color: white;
+                background-color: rgba(0, 0, 0, 0);
+                color: white;
+            }
+
+            .back:hover{
+                background-color: white;
+                color: black;
+                transition: 0.8s;
+                cursor: pointer;
+            }

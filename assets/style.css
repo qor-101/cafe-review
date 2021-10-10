@@ -4,57 +4,66 @@
 body{
 	background-image: url('res.png');
 	background-size: cover;
-   
 	}
 .logo{
 	font-family: Josefin Sans;
-    font-size:1.5625em;
-    margin-top: 2.5625em;
-	margin-left:5.0625em;
+    font-size: 175% ;
+    margin-top: 3%;
+	margin-left:10%;
 	color: white;   
 	}
 #tag{
-    font-family:Montserrat; 
-    font-weight:bolder;
-    font-size: 3.75em;
-    color: white;
-    margin-left: 2.0625em;
+    margin-top: 6%;
+    font-size: 500%;
+    font-weight: bolder;
+    color: transparent  ;
+    margin-left: 10%;
+    -webkit-text-stroke: 1px #fff;
+    background: url('back.png');
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 40s linear infinite;
     }
+@keyframes back{
+    100%{
+        background-position: 4000px 0;
+    }
+}
 .para{
-    margin-left:7.0625em;
+    margin-left: 10%;
     color:#c7c1c1;
-    font-size:1.125em;
+    font-size: 120%;
     font-weight:lighter;
-    line-height: 1.7em;
+    line-height: 150%;
     text-align: justify;
-    width:40%;
+    width: 32rem; 
     font-family:Ubuntu;
     }
 #button{
-    width:9.375em;
-    height:2.8125em;
-    border-width:0.125em;
+    width: 12%;
+    height:2.813rem;
+    border-width:0.125rem;
     border-color:white;
-    border-radius:1.25em;
+    border-radius:1.25rem;
     background-color:rgba(0, 0, 0, 0);
     color:white;
     font-family:ubuntu;
-    font-size: 1.125em;
-    margin-left: 7.0625em;
-    margin-top: 1.25em;
+    font-size: 1.125rem;
+    margin-left: 10%;
+    margin-top: 2%;
     }
 #button1{
-    width:9.375em;
-    height:2.8125em;
-    border-width:0.125em;
+    width: 12%;
+    height:2.813rem;
+    border-width:0.125rem;
     border-color:white;
-    border-radius:1.25em;
+    border-radius:1.25rem;
     background-color:rgba(0, 0, 0, 0);
     color:white;
     font-family:ubuntu;
-    font-size: 1.125em;
-    margin-left: 1.25em;
-    margin-top: 1.25em;
+    font-size: 1.125rem;
+    margin-left: 2%;
+    margin-top: 2%;
     }
 #button:hover{
     background-color: white;
@@ -71,63 +80,155 @@ body{
 .div1{
     display: none;  
     position: absolute;
-    top: 220px;
-    left: 500px;
-    background-color: rgba(0, 0, 0, 0.85);
-    height: 185px;
-    width: 300px;
-    text-align: center;
-    border-radius: 20px;
-    border: 2px solid white;    
+    top: 20%;
+    left: 22%;
+    background-color:white;
+    height: 60%;
+    width: 55%;
+    border-radius:10px;
+    box-shadow: 0px 5px 15px 10px #545454;
     }
+.form{
+    float:left;
+    width:50%;
+}
+.pic{
+    
+    float:right;
+    width:49%;
+    height:  100%;    
+}
+.form1{
+    float:right;
+    width:50%;
+}
+.pic1{
+    
+    float:left;
+    width:49%;
+    height:  100%;    
+}
+#imgg{
+    height:28.313rem;
+    width:28.75rem;
+    max-width:100%;
+    max-height:100%;
+    overflow: hidden;
+    object-fit:cover;
+    display: inline-block;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#imgg1{
+    height:28.313rem;
+    width:28.75rem;
+    max-width:100%;
+    max-height:100%;
+    overflow: hidden;
+    object-fit:cover;
+    display: inline-block;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
 .div2{
-    display: none;  
-    position: absolute;
-    top: 220px;
-    left: 500px;
-    background-color: rgba(0, 0, 0, 0.85);
-    height: 210px;
-    width: 300px;
-    text-align: center;
-    border-radius: 20px;
-    border: 2px solid white;    
+    
+        display: none;  
+        position: absolute;
+        top: 20%;
+        left: 22%;
+        background-color:white;
+        height: 60%;
+        width: 55%;
+        border-radius:10px;
+        box-shadow: 0px 5px 15px 10px #545454;
     }
 #button2{
+        margin-top: 5%;
         font-family: Ubuntu;
         border-radius: 10px;
-        background-color: white;
-        color: black;
+        border: none;
+        background-color: #EC732B;
+        height: 2rem;
+        width: 5rem;
+        color: white;
+        margin-left: 25%;
     }
 #button3{
-    font-family: Ubuntu;
-    border-radius: 10px;
-    background-color: white;
-    color: black;
+        margin-top:5% ;
+        font-family: Ubuntu;
+        border-radius: 10px;
+        border: none;
+        background-color: #EC732B;
+        height: 2rem;
+        width: 5rem;
+        color: white;
+        margin-left: 5%;
     }
 #button4{
         font-family: Ubuntu;
         border-radius: 10px;
-        background-color: white;
-        color: black;
+        border: none;
+        background-color: #EC732B;
+        height: 2rem;
+        width: 5rem;
+        color: white;
+        margin-left: 25%;
+        margin-top:5% ;
     }
 #button5{
-    font-family: Ubuntu;
-    border-radius: 10px;
-    background-color: white;
-    color: black;
+        font-family: Ubuntu;
+        border-radius: 10px;
+        border: none;
+        background-color: #EC732B;
+        height: 2rem;
+        width: 5rem;
+        color: white;
+        margin-left: 5%;
+        margin-top: 5%;
     }
+
+
 #a1{
     color: white;
+    cursor: pointer;
+    text-decoration: underline;
     }
 #button2:hover{
     cursor: pointer;
+    background-color: #E55702;
 }
 #button3:hover{
     cursor: pointer;
+    background-color: #E55703;
 }
 #button4:hover{
     cursor: pointer;
+    background-color: #E55702;
 }
 #button5:hover{
     cursor: pointer;
+    background-color: #E55703;
+}
+
+
+input{
+    height: 1.875rem;
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    background-color: transparent;
+    outline: none;
+    width: 15.625rem;
+}
+.form1 input{
+    height: 1.975rem;
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    background-color: transparent;
+    margin-bottom:2%;
+    margin-left:13%;
+    outline: none;
+    width: 15.625rem;
+
 }
