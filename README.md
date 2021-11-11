@@ -9,3 +9,9 @@ INSTRUCTIONS TO CONTRIBUTORS:
 3) Commit and push to the main branch after you are done for the day.
 
 4) Feel free to contact qor-101 at qor6119@gmail.com for any queries.
+
+SnapShots :
+
+![Screenshot_20211111_210758](https://user-images.githubusercontent.com/53957162/141326205-c942ae35-0558-47b5-b4dc-79ddc131425c.png)
+
+![Screenshot_20211111_210818](https://user-images.githubusercontent.com/53957162/141326224-cee8c0fe-dd3a-4b92-93e6-3d9aa37e0aa3.png)
