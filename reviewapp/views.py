@@ -4,7 +4,7 @@ from django.http import HttpResponse, request
 from django.template import loader
 from django import forms
 from .dbactions import *
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from datetime import date
 import sqlite3
@@ -160,5 +160,10 @@ def profile(request):
     column names in db : id,password,username,last_name,first_name,email
     coress name in form: --,pwd,usn,lname,fname,mail
     '''
+    
     doc = {'usn':uid.username,'lname':uid.last_name,'fname':uid.first_name,'mail':uid.email}
     return render(request,"profile.html",doc,content_type='text/html')
+
+def logout_user(request):
+    logout(request)
+    return redirect('/')

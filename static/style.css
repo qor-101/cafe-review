@@ -144,6 +144,7 @@ body{
     }
 #button2{
         margin-top: 5%;
+        margin-bottom: 2%;
         font-family: Ubuntu;
         border-radius: 10px;
         border: none;
