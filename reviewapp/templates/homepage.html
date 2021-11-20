@@ -13,6 +13,7 @@
             $("#button1").click(function(){
                 $("#myForm").fadeIn(500);
                 $("#HP").css("filter", "blur(10px)");
+                $("#HP").css("pointerEvents", 'none');
             });
         });
         $(document).ready(function(){
@@ -45,22 +46,30 @@
             document.getElementById('myForm').style.display='none';
             document.getElementById('UN').value="";
             document.getElementById('PW').value="";
-            $("#signupForm").fadeIn(500);        
+             
+            document.getElementById('HP').style.pointerEvents='none';
+           
+            $("#signupForm").fadeIn(500);
+
+                  
         }
 
         function closesignup() {
             document.getElementById('signupForm').style.display='none';
+            document.getElementById('HP').style.pointerEvents='auto';  
             document.getElementById('fname').value="";
             document.getElementById('lname').value="";
             document.getElementById('email').value="";
             document.getElementById('usn').value="";
-            document.getElementById('pwd').value="";    
+            document.getElementById('pwd').value="";  
+           
         }
 
         function closeform() {
             document.getElementById('myForm').style.display='none';
             document.getElementById('UN').value="";
             document.getElementById('PW').value="";
+            document.getElementById('HP').style.pointerEvents='auto';
             $("#HP").css("filter", "blur(0)");
 
         }
