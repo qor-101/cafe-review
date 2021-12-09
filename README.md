@@ -1,4 +1,4 @@
-Cafe Review is a website hosting reviews of university courses and instructors. Reviews are written by present and past students taking the specific course. Reviews are accesible through a simple search or through categorically choosing college, department and course.
+Cafe Review is a website hosting reviews of university courses and instructors. Reviews are written by present and past students taking the specific course. Reviews are accesible through a simple search or through categorically choosing college, department and course...
 
 INSTRUCTIONS TO CONTRIBUTORS:
 
