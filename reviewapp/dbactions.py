@@ -34,3 +34,15 @@ def get_user():
         lis.append(i[0])
     mydb.close()
     return lis
+
+def get_docs_by_user(key_dict,dbname):
+    dash_result = []
+    myclient = MongoClient('mongodb://localhost:27017/')
+    db = myclient[dbname]
+    coll_list = db.list_collection_names()
+    for i in coll_list:
+        collection = db[i]
+        list_docs = collection.find(key_dict)
+        for x in list_docs:
+            dash_result.append(x)
+    return dash_result
