@@ -63,12 +63,38 @@
     {% for item in items %}
     <div style="padding: 10px; background-color: rgba(0, 0, 0, 0.9); color: white;width: 90%; font-family: Varela;border-radius: 10px;" id=div2>
       <p> 
-          College: {{item.college}}<br>
-          Course: {{item.course}}<br>
-          Title: {{item.title}}<br>
-          Date: {{item.date}}<br>
-          Rating: {{item.rating}}<br>
-          Review: {{item.review}}<br>
+        <table>
+            <tr>
+                <td>College</td>
+                <td>:</td>
+                <td>{{ item.college }}</td>
+            </tr>
+            <tr>
+                <td>Course</td>
+                <td>:</td>
+                <td>{{ item.course }}</td>
+            </tr>
+            <tr>
+              <td>Title</td>
+              <td>:</td>
+              <td>{{ item.title }}</td>
+            </tr>
+            <tr>
+              <td>Date</td>
+              <td>:</td>
+              <td>{{ item.date }}</td>
+            </tr>
+            <tr>
+              <td>Rating</td>
+              <td>:</td>
+              <td>{{ item.rating }}</td>
+            </tr>
+            <tr>
+              <td>Review</td>
+              <td>:</td>
+              <td>{{ item.review }}</td>
+            </tr>
+          </table>
       </p>
     </div>
     {% endfor %}

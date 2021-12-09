@@ -118,17 +118,49 @@
     </script>
   </head>
   <body>
-    
+    <div class="searching">
+      <form id="ii" action="/fetch" method="POST" onsubmit="return validate()">
+        <select id ="branch" name = "branch" class="formele" required>
+            <option class="one" value="" selected disabled hidden>Domain</option>
+            <option class="one" value="Arts">Arts</option>
+            <option class="one" value="Engineering">Engineering</option>
+            <option class="one" value="Medicine">Medicine</option>
+            <option class="one" value="Law">Law</option>
+        </select>
+        <input type="text" placeholder="Course name" name="course" id="course" class="formele" required>
+        <input type="text" placeholder="CollegeName" name="college" id="college" class="formele">
+        <button type="submit" id="btn"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
 
-    <div id="div2">
+    <div id="div1">
     <h1><center>Results</center></h1>
     {% for item in items %}
-    <div style="padding: 10px; background-color: rgba(0, 0, 0, 0.9); color: white;width: 90%; font-family: Varela;border-radius: 10px;" id=div2>
+    <div style="padding: 10px; background-color: rgba(0, 0, 0, 0.9); color: white;width: 90%; font-family: Varela;border-radius: 10px;" id="div2">
       <p> 
-          Title: {{item.title}}<br>
-          Date: {{item.date}}<br>
-          Rating: {{item.rating}}<br>
-          Review: {{item.review}}
+        
+        <table>
+          <tr>
+            <td>Title</td>
+            <td>:</td>
+            <td>{{ item.title }}</td>
+          </tr>
+          <tr>
+            <td>Date</td>
+            <td>:</td>
+            <td>{{ item.date }}</td>
+          </tr>
+          <tr>
+            <td>Rating</td>
+            <td>:</td>
+            <td>{{ item.rating }}</td>
+          </tr>
+          <tr>
+            <td>Review</td>
+            <td>:</td>
+            <td>{{ item.review }}</td>
+          </tr>
+        </table>
       </p>
     </div>
     {% endfor %}
