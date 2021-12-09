@@ -2,7 +2,7 @@
 {% load static %}
 <html>
   <head>
-    <title>search results</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style type="text/css">
     @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Ubuntu');
@@ -14,55 +14,6 @@
     }
     h1{
       color: white;
-    }
-    .searching{
-      align-items: center;
-      display:flex;
-      justify-content: center;
-      margin-top:3%;
-      overflow: hidden;
-    }
-    .formele{
-      display: block;
-      float: left;
-    }
-    #btn{
-      height: 3.4rem;
-      width: 3.4rem;
-      outline: none;
-      border:none;
-      background-color: #EC732B;
-    }
-    #branch{
-      height: 3.4rem;
-      width:9rem;
-      font-size: 1.25rem;
-      text-align: center;
-      outline: none;
-      color:gray;
-    }
-    #course{
-      height: 3rem;
-      width: 10rem;
-      font-size: 1.25rem;
-      outline: none;
-      text-align: center;
-      caret-color: #EC732B;
-      
-    }
-    #college{
-      height: 3rem;
-      width: 30rem;
-      font-size: 1.25rem;
-      outline: none;
-      padding-left: 1rem;
-      caret-color: #EC732B;
-    }
-    #ii{
-      border: rgba(247, 247, 250, 0.2) 1rem solid;
-    }
-    #branch{
-      color: black;
     }
     p{
       font-family: Varela;
@@ -77,6 +28,7 @@
       border: none;
       border-bottom-style: solid;
       border-bottom-color: white;
+      margin-bottom: 2%;
     }
     
   ::-webkit-scrollbar {
@@ -104,31 +56,19 @@
     background-color: black;
   }
     </style>
-    <script>
-      function validate() {
-        var col = document.forms["ii"]["college"].value;
-        if (col.length <= 8) {
-          alert("College name is too short."); 
-          return false;
-        }
-        if('{{ bool }}'=="No"){
-          alert('Sorry, No Results Found');
-        }
-      }
-    </script>
   </head>
   <body>
-    
-
-    <div id="div2">
-    <h1><center>Results</center></h1>
+    <div id="div1">
+    <h1><center>Dashboard</center></h1>
     {% for item in items %}
     <div style="padding: 10px; background-color: rgba(0, 0, 0, 0.9); color: white;width: 90%; font-family: Varela;border-radius: 10px;" id=div2>
       <p> 
+          College: {{item.college}}<br>
+          Course: {{item.course}}<br>
           Title: {{item.title}}<br>
           Date: {{item.date}}<br>
           Rating: {{item.rating}}<br>
-          Review: {{item.review}}
+          Review: {{item.review}}<br>
       </p>
     </div>
     {% endfor %}

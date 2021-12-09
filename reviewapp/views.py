@@ -167,3 +167,12 @@ def profile(request):
 def logout_user(request):
     logout(request)
     return redirect('/')
+
+def dash_user(request):
+    user = request.user.username
+    dict_key = {"user":user}
+    r1 = get_docs_by_user(dict_key,"Engineering")
+    r1+= get_docs_by_user(dict_key,"Arts")
+    r1+= get_docs_by_user(dict_key,"Medicine")
+    r1+= get_docs_by_user(dict_key,"Law")
+    return render(request,"dashboard.html",{'items':r1},content_type='text/html')
